@@ -19,21 +19,21 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="">Books</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="../alpha/students">Students</a>
-          </li>
+              <a class="nav-link" href="">Students</a>
+            </li>
           <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Records
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="../alpha/records/create_id.php">Generate Student Id</a>
-              <a class="dropdown-item" href="../alpha/records/dtr.php">DTR</a>
+              <a class="dropdown-item" href="../records/create_id.php">Generate Student Id</a>
+              <a class="dropdown-item" href="../records/dtr.php">DTR</a>
               <a class="dropdown-item" href="#">Evaluation</a>
             </div>
           </li>
