@@ -8,8 +8,8 @@ $result = $db->connect()->query("SELECT * FROM `students` JOIN `courses` ON `stu
 
 ?>
 
-<div class="container">
-    <table class="table">
+<div class="container" style="margin-top: 2%">
+    <table class="table" id="table_id">
         <thead>
             <tr>
                 <th scope="col">Name</th>
@@ -34,7 +34,7 @@ $result = $db->connect()->query("SELECT * FROM `students` JOIN `courses` ON `stu
                 <td><?php echo $course ?></td>
                 <td><?php echo $year ?></td>
                 <td><?php echo $block ?></td>
-                <td><a href="#" class="btn btn-primary">View</a></td>
+                <td><a href="viewStudent.php?id=<?php echo $row->id ?>" class="btn btn-primary">View</a></td>
                 <td><a href="#" class="btn btn-secondary">Update</a></td>
                 <td><a href="#" class="btn btn-danger">Delete</a></td>
             </tr>
@@ -44,7 +44,11 @@ $result = $db->connect()->query("SELECT * FROM `students` JOIN `courses` ON `stu
         </tbody>
     </table>
 </div>
-
+<script>
+    $(document).ready( function () {
+        $('#table_id').DataTable();
+    } );
+</script>
 <?php
 include '../templates/footer.php';
 ?>
