@@ -22,7 +22,7 @@ include 'header.php';
 
     ?>
 
-    <div class="container">
+    <div class="container" style="margin-top: 2%">
         <h1><?php echo $studentFullname ?></h1>
         <h5><?php echo $studentCourse . " " . $studentYear . " " . $studentBlock ?></h5>
         
