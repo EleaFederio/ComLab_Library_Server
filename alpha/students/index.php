@@ -24,7 +24,7 @@ $result = $db->connect()->query("SELECT * FROM `students` JOIN `courses` ON `stu
         <tbody>
             <?php
                 while($row = $result->fetch_object()){
-                    $fullname = $row->firstName . " " . $row->lastName;
+                    $fullname = utf8_encode(utf8_decode($row->firstName)) . " " . utf8_encode(utf8_decode($row->lastName));
                     $course = $row->courseName;
                     $year = $row->year;
                     $block = $row->block;

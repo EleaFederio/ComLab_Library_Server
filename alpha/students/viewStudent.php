@@ -29,7 +29,7 @@ include 'header.php';
     </div>
 
     <div class="container" style="margin-top: 2%">
-        <table class='display' id="example" style="width: 100%">
+        <table class='table' id="example" style="width: 100%">
             <thead>
                 <th>Date</th>
                 <th>Time in</th>
