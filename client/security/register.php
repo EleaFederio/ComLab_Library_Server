@@ -2,7 +2,7 @@
   include 'authentication.php';
   if(isset($_GET['erro'])){
     if($_GET['erro'] == 200){
-      echo "<script>alert('Wrong Username or Password!')</script>";
+      
     }
   }
 ?>
@@ -32,7 +32,7 @@
                     <input type="text" class="form-control" name="studentIdInput" aria-describedby="emailHelp" placeholder="Student ID" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="studentPinInput" placeholder="PIN" autocomplete="off">
+                    <input type="text" class="form-control" name="studentPinInput" placeholder="PIN" autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 <p class="text-center">or</p>

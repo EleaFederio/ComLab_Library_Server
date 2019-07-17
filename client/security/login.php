@@ -1,3 +1,7 @@
+<?php
+include 'authentication.php';
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,15 +22,15 @@
     <section class="container-fluid">
         <section class="row justify-content-center">
             <section class="col-12 col-sm-6 col-md-3">
-                <form class="form-container">
+                <form class="form-container" action="login.php" method="POST">
                     <h3 class="text-center">LOGIN FORM</h3>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Student ID">
+                    <input type="text" class="form-control" name="studentId" placeholder="Student ID">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                <button type="submit" class="btn btn-primary btn-block" name="login">Submit</button>
                 <p class="text-center">or</p>
                 <center><a style="color:blue" href="register.php">Register</a></center>
                 </form>

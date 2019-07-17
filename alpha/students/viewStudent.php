@@ -17,14 +17,17 @@ include 'header.php';
         $studentCourse = $student->courseName;
         $studentYear = $student->year;
         $studentBlock = $student->block;
+        $studentHash = $student->hash;
+        $studentBugcId = $student->studentId;
         
     }
 
     ?>
 
     <div class="container" style="margin-top: 2%">
-        <h1><?php echo $studentFullname ?></h1>
+        <h1><?php echo $studentFullname ?> <small> (<?php echo $studentBugcId ?>) </small></h1>
         <h5><?php echo $studentCourse . " " . $studentYear . " " . $studentBlock ?></h5>
+        <p style="color: blue"><?php echo $studentHash ?></p>
         
     </div>
 

@@ -30,8 +30,9 @@ if($selectedStudent = $oneStudentSelect->fetch_object()){
     <section class="container-fluid">
         <section class="row justify-content-center">
             <section class="col-12 col-sm-6 col-md-3">
-                <form class="form-container" action="register.php" method="POST">
+                <form class="form-container" action="create_account.php" method="POST">
                     <h3 class="text-center">CREATE ACCOUNT</h3>
+                    <input type="hidden" name="createTag" value="true" >
                 <div class="form-group">
                     <input type="text" class="form-control" name="studentFirstName" placeholder="First Name" value="<?php echo $studentFirstName ?>" autocomplete="off">
                 </div>
@@ -48,7 +49,7 @@ if($selectedStudent = $oneStudentSelect->fetch_object()){
                     <input type="password" class="form-control" name="studentConfirmPassword" placeholder="Confirm Password" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="studentPinInput" placeholder="Phone Number" autocomplete="off">
+                    <input type="text" class="form-control" name="studentPhoneNumber" placeholder="Phone Number" autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 <p class="text-center">or</p>
