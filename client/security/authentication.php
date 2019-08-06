@@ -8,7 +8,10 @@ if(isset($_POST['login'])){
     $studentId = $_POST['studentId'];
     $password = md5($_POST['password']);
     $query = "SELECT * FROM `students` WHERE `studentId` = '$studentId' AND `appPassword` = '$password'";
-    if($db->connect()->query($query)){
+    if($result = $db->connect()->query($query)){
+        if($student = $result->fetch_object()){
+            $_SESSION['studentId'] = $student->studentId;
+        }
         $_SESSION['hash'] = rand(00000000, 99999999);
         header('location: ../index.php');
     }

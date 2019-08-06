@@ -6,5 +6,50 @@ include 'security/authentication.php';
 if(!isset($_SESSION['hash'])){
     header('Location:security/login.php');
 }else{
-    echo 'Hello';
+    
 }
+include 'templates/header.php';
+$studentId = $_SESSION['studentId'];
+
+    $query = "SELECT * FROM `students` WHERE `studentId` = '$studentId'";
+    if($result = $db->connect()->query($query)){
+        if($student = $result->fetch_object()){
+            $_SESSION['fullname'] = $student->firstName.' '.$student->lastName;
+        }
+    }
+
+?>
+<nav>
+    <div class="nav-wrapper teal lighten-2">
+    <a href="#" class="brand-logo"><?php echo $_SESSION['fullname'] ?></a>
+    
+    </div>
+</nav>
+
+
+<script>alert("Hello World") </script>
+
+<input type="file" accept="image/*" />
+<br><br><br><br><br>
+<input type="file" accept="image/*" capture="camera" />
+
+
+
+
+
+<?php
+    include 'templates/footer.php';
+?>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+</script>
