@@ -27,7 +27,7 @@ if($result = $db->connect()->query($query)){
     <div class="image-container">
         <img src="../pics/pic1.jpg" alt="" style="width: 100%">
         <div class="title">
-            <h1><?php echo $fullname ?></h1>
+            <center><h1><?php echo $fullname ?></h1></center>
         </div>
     </div>
     <div class="main-container">
@@ -36,6 +36,10 @@ if($result = $db->connect()->query($query)){
         <p><i class="fas fa-phone-square-alt fa-lg info"></i><?php echo $phone ?></p>
         <hr>
         <p><b><i class="fas fa-fingerprint fa-lg info"></i></b></p>
+        <p><p>Library Activity</p></p>
+        <div class="skill-bar">
+            <div class="progress-bar" style="width:80%">80%</div>
+        </div>
         <center><button class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> LOGOUT</button></center>
     </div>
 </div>
