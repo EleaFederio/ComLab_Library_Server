@@ -1,6 +1,10 @@
 <?php
 
 include '../templates/header.php';
+include '../security/authentication.php';
+if(!isset($_SESSION['hash'])){
+    header('Location:../security/login.php');
+}
 
 ?>
     <div class="container" style="margin-top:20%">

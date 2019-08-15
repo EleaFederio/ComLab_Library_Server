@@ -11,8 +11,8 @@ if(isset($_POST['login'])){
     if($result = $db->connect()->query($query)){
         if($student = $result->fetch_object()){
             $_SESSION['studentId'] = $student->studentId;
+            $_SESSION['hash'] = rand(00000000, 99999999);
         }
-        $_SESSION['hash'] = rand(00000000, 99999999);
         header('location: ../index.php');
     }
 }

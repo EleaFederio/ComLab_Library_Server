@@ -1,5 +1,9 @@
 <?php
 include '../templates/header.php';
+include '../security/authentication.php';
+if(!isset($_SESSION['hash'])){
+    header('Location:../security/login.php');
+}
     if(isset($_POST['search'])){
         $response = "<ul><li>No data found!</li></ul>";
 
@@ -42,13 +46,31 @@ include '../templates/header.php';
         li:hover{
             color: silver;
             background: #0088cc;
+            z-index: 5;
+        }
+        .list-group, .list-group-item{
+            z-index: 2;
+        }
+        .container{
+            
+        }
+        input{
+            display: inline;
+            width: 100%;
+            position: fixed;
+            z-index: 9;
+            padding-top: 10%;
+            background: #0088cc;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container" style="margin-top: 10%">
-        <input type="text" class="form-control" id="searchBox" placeholder="Search...">
-        <div id="response"></div>
+    <div class="container stuck" style="padding-top: 10%">
+        <form class="navbar-form navbar-left" role="search">
+            <input type="text" class="form-control" id="searchBox" placeholder="Search...">
+            <div id="response"></div>
+        </form>
     </div>
 
 
@@ -83,6 +105,10 @@ include '../templates/header.php';
                 $("#searchBox").val(books);
                 $("#response").html("");
             });
+        });
+
+        $(document).ready(function(){
+            $(window).stuck();
         });
     </script>
 </body>

@@ -9,6 +9,7 @@ if(!isset($_SESSION['hash'])){
     
 }
 include 'templates/header.php';
+echo $_SESSION['hash'];
 $studentId = $_SESSION['studentId'];
 
     $query = "SELECT * FROM `students` WHERE `studentId` = '$studentId'";
@@ -26,20 +27,16 @@ $studentId = $_SESSION['studentId'];
     </div>
 </nav>
 
-
-<script>alert("Hello World") </script>
-
 <input type="file" accept="image/*" />
 <br><br><br><br><br>
 <input type="file" accept="image/*" capture="camera" />
+<!-- 7a7 -->
 
 
 
 
 
-<?php
-    include 'templates/footer.php';
-?>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
