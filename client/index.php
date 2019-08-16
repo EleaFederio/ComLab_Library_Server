@@ -20,17 +20,30 @@ $studentId = $_SESSION['studentId'];
     }
 
 ?>
-<nav>
-    <div class="nav-wrapper teal lighten-2">
-    <a href="#" class="brand-logo"><?php echo $_SESSION['fullname'] ?></a>
-    
-    </div>
-</nav>
+<!-- ************************************************************************* -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+    <header class="showcase">
+        <div class="content"></div>
+        <img src="pics/bugcTransparentLogo.png" class="logo" alt="BUGC LIBRARY">
+        <div class="title">
+            WELCOME TO BICOL UNIVERSITY GUBAT CAMPUS LIBRARY!
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aperiam?</div>
+        </div>
+    </header>
 
-<input type="file" accept="image/*" />
-<br><br><br><br><br>
-<input type="file" accept="image/*" capture="camera" />
-<!-- 7a7 -->
+    <section class="services">
+        <div class="container grid-3"></div>
+    </section>
+</body>
+</html>
 
 
 
@@ -38,6 +51,7 @@ $studentId = $_SESSION['studentId'];
 
 
 
+<!-- ************************************************************************** -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
