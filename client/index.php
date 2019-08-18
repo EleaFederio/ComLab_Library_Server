@@ -9,7 +9,7 @@ if(!isset($_SESSION['hash'])){
     
 }
 include 'templates/header.php';
-echo $_SESSION['hash'];
+// echo $_SESSION['hash'];
 $studentId = $_SESSION['studentId'];
 
     $query = "SELECT * FROM `students` WHERE `studentId` = '$studentId'";
@@ -21,31 +21,18 @@ $studentId = $_SESSION['studentId'];
 
 ?>
 <!-- ************************************************************************* -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-</head>
-<body>
-    <header class="showcase">
-        <div class="content"></div>
-        <img src="pics/bugcTransparentLogo.png" class="logo" alt="BUGC LIBRARY">
-        <div class="title">
-            WELCOME TO BICOL UNIVERSITY GUBAT CAMPUS LIBRARY!
-            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aperiam?</div>
-        </div>
-    </header>
-
-    <section class="services">
-        <div class="container grid-3"></div>
-    </section>
-</body>
-</html>
-
-
+<link rel="stylesheet" href="design/home.css">
+<div id="home">
+    <div class="landing-text">
+        <h1>LIBRARY</h1>
+        <h3>Bicol University Gubat Campus</h3>
+        <br>
+        <!-- <a href="#" class="btn btn-default btn-lg">Get Started</a> -->
+    </div>
+</div>
+<p class="lead text-justify">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo magnam provident quis libero qui? Iusto rerum ratione nesciunt minus consequuntur incidunt minima nostrum similique possimus adipisci alias nemo quae iste labore accusantium modi tempora iure, magnam, exercitationem vero id! Porro exercitationem voluptatibus dolorem voluptatem corrupti quibusdam voluptatum mollitia rem a quam dolore enim, deleniti alias accusamus in amet optio! Aliquam dignissimos sint voluptatibus eos natus magnam distinctio suscipit accusamus unde hic alias mollitia tempora nobis, est similique nesciunt? Iusto ullam dicta, quidem quia delectus eum unde doloribus enim quae? Unde facere placeat cum dignissimos saepe porro aliquam ad quia quaerat.
+</p>
 
 
 
