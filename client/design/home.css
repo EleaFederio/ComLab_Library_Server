@@ -24,6 +24,11 @@ h3{
     font-weight: 500;
     line-height: 1.2;
 }
+.text{
+    padding: 1%;
+    background-color: #000;
+    opacity: 500;
+}
 .btn-default{
     background-color: #fff;
     color: #36342f;

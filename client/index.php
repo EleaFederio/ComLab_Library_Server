@@ -24,8 +24,10 @@ $studentId = $_SESSION['studentId'];
 <link rel="stylesheet" href="design/home.css">
 <div id="home">
     <div class="landing-text">
-        <h1>LIBRARY</h1>
-        <h3>Bicol University Gubat Campus</h3>
+        <div class="text">
+            <h1>LIBRARY</h1>
+            <h3>Bicol University Gubat Campus</h3>
+        </div>
         <br>
         <!-- <a href="#" class="btn btn-default btn-lg">Get Started</a> -->
     </div>

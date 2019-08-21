@@ -16,9 +16,10 @@ $data = $result->fetch_all();
 
 for($x = 0; $x < $counter; $x = $x + 4){
     $student1 = $data[$x];
-    $student2 = $data[$x + 1];
-    $student3 = $data[$x + 2];
-    $student4 = $data[$x + 3];
+    $student2 = $data[($x + 1 >= $counter)?1:$x + 1];
+    $student3 = $data[($x + 2 >= $counter)?1:$x + 2];
+    $student4 = $data[($x + 3 >= $counter)?1:$x + 3];
+    //echo 'Student1'.$student1[2].' '.$student1[4].'Student2'.$student2[2].' '.$student2[4].'Student3'.$student3[2].' '.$student3[4].'Student4'.$student4[2].' '.$student4[4].'<br>';
 
     $docs->template($student1[2]." ". substr($student1[3], 0, 1) .". " . $student1[4], $student2[2]." ". substr($student2[3], 0, 1) .". " .$student2[4], $student3[2]." ". substr($student3[3], 0, 1) .". " . $student3[4], $student4[2]." ". substr($student4[3], 0, 1) .". " .$student4[4],
     $student1[5]. ", ".$student1[6], $student2[5].", ".$student2[6], $student3[5].", ".$student3[6], $student4[5].", ".$student4[6],
