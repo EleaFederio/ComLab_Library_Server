@@ -30,22 +30,34 @@ include 'header.php';
 
     ?>
 
-<h1 style="background-color: #656168; color: white; padding: 1%"><?php echo $booktTitle ?></h1>
-    <div class="container" style="background-color: #e1e4f3; padding: 1%">
-        
-        <h5><?php echo 'Author: '. $bookAuthur ?></h5>
-        <h5><?php echo 'Publisher: '.$bookPublisher ?></h5>
-        <h4><?php echo 'Class ID: '. '<b>'.$bookCallNumber .'</b>' ?></h4>
+    <link rel="stylesheet" href="../lib/view_book.css">
 
-    </div>
-
-    <div class="container" style="background-color: #f5f6f8;" class="col-md-3">
-        <h6><?php echo 'Edition: '. '<b>'.$bookEdition .'</b>' ?></h6>
-        <h6><?php echo 'Available Copies: '. '<b>'.$bookCopies .'</b>' ?></h6>
-        <h6><?php echo 'Number of Pages: '. '<b>'.$bookPages .'</b>' ?></h6>
-        <h6><?php echo 'Remark: '. '<b>'.$bookRemarks .'</b>' ?></h6>
-    </div>
-    
+    <div class="container" style="margin-top: 5%">
+        <div class="row">
+            <div class="col-md-5">
+            <div class="book-pic">
+                <img src="../resource/noli me tangere.jpg" alt="" width="350">
+            </div>
+            </div>
+            <div class="col-md-7">
+            <p class="detail-title">Title</p>
+            <h2 class="details-info"><?php echo $booktTitle ?></h2>
+            <p class="detail-title">Author</p>
+            <h6 class="details-info"><?php echo $bookAuthur ?></h6>
+            <p class="detail-title">Publisher</p>
+            <h6 class="details-info"><?php echo $bookPublisher ?></h6>
+            <p class="detail-title">Call Number</p>
+            <h3 class="details-info"><?php echo $bookCallNumber ?></h3>
+            <p class="detail-title">Edition</p>
+            <h6 class="details-info"><?php echo $bookEdition ?></h6>
+            <p class="detail-title">Available Copies</p>
+            <h6 class="details-info"><?php echo $bookCopies ?></h6>
+            <p class="detail-title">Number of Pages</p>
+            <h6 class="details-info"><?php echo $bookPages ?></h6>
+            <p class="detail-title">Remarks</p>
+            <h6 class="details-info"><?php echo $bookRemarks ?></h6>
+            </div>
+        </div>
     </div>
 <?php
 include '../templates/footer.php';
