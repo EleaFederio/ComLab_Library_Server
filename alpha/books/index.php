@@ -38,7 +38,7 @@ include 'header.php';
                     <td><?php echo $author ?></td>
                     <td><?php echo $publisher ?></td>
                     <td><a href="view_book.php?id=<?php echo $row->book_id ?>" class="btn btn-primary">View</a></td>
-                    <td><a href="#" class="btn btn-secondary">Update</a></td>
+                    <td><a href="editbook.php?id=<?php echo $row->book_id ?>" class="btn btn-secondary">Update</a></td>
                     <td><a href="#" class="btn btn-danger">Delete</a></td>
                 </tr>
                 <?php
