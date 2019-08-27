@@ -4,12 +4,12 @@ include_once 'savebook.php';
 ?>
 
 <div class="container" style="margin-top: 5%">
-    <form action="addbook.php" method="POST">
+    <form action="addbook.php" method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-5">
                 <div class="book-pic">
-                    <img src="../resource/noli me tangere.jpg" alt="" width="350">
-                    <input type="file" value="upload picture">
+                    <img src="../resource/noli me tangere.jpg" id="bookpic" alt="" width="350">
+                    <input type="file" onchange="imagePreview.call(this)" name="book_image" value="upload picture">
                 </div>
                 </div>
                 <div class="col-md-7">
@@ -58,3 +58,16 @@ include_once 'savebook.php';
         </div>
     </form>
 </div>
+
+<script>
+    function imagePreview(){
+        var reader = new FileReader();
+        var imageField = document.getElementById("bookpic");
+        reader.onload = function(){
+            if(reader.readyState == 2){
+                imageField.src = reader.result;
+            }
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>

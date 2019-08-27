@@ -26,6 +26,7 @@ include 'header.php';
         $bookPages = $book->pages;
         $bookYear = $book->year;
         $bookRemarks = $book->remarks;
+        $bookImage = $book->book_pic;
     }
 
     ?>
@@ -36,7 +37,7 @@ include 'header.php';
         <div class="row">
             <div class="col-md-5">
             <div class="book-pic">
-                <img src="../resource/noli me tangere.jpg" alt="" width="350">
+                <img src="<?php echo ($bookImage == '')? "bookpics/no_image_book.jpg": $bookImage?>" alt="" width="350">
             </div>
             </div>
             <div class="col-md-7">
