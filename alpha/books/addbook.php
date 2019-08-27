@@ -8,7 +8,7 @@ include_once 'savebook.php';
         <div class="row">
             <div class="col-md-5">
                 <div class="book-pic">
-                    <img src="../resource/noli me tangere.jpg" id="bookpic" alt="" width="350">
+                    <img src="bookpics/no_image_book.jpg" id="bookpic" alt="" width="350">
                     <input type="file" onchange="imagePreview.call(this)" name="book_image" value="upload picture">
                 </div>
                 </div>
