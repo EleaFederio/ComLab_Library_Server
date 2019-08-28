@@ -40,7 +40,7 @@ if($result = $db->connect()->query($query)){
         <div class="skill-bar">
             <div class="progress-bar" style="width:80%">80%</div>
         </div>
-        <center><button class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> LOGOUT</button></center>
+        <center><a class="btn btn-danger" href="../security/authentication.php?logout=0"><i class="fas fa-sign-out-alt"></i> LOGOUT</a></center>
     </div>
 </div>
 

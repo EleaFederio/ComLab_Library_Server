@@ -22,6 +22,13 @@ $studentId = $_SESSION['studentId'];
 ?>
 <!-- ************************************************************************* -->
 <link rel="stylesheet" href="design/home.css">
+<style>
+    p{
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+</style>
+
 <div id="home">
     <div class="landing-text">
         <div class="text">
@@ -32,9 +39,42 @@ $studentId = $_SESSION['studentId'];
         <!-- <a href="#" class="btn btn-default btn-lg">Get Started</a> -->
     </div>
 </div>
-<p class="lead text-justify">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo magnam provident quis libero qui? Iusto rerum ratione nesciunt minus consequuntur incidunt minima nostrum similique possimus adipisci alias nemo quae iste labore accusantium modi tempora iure, magnam, exercitationem vero id! Porro exercitationem voluptatibus dolorem voluptatem corrupti quibusdam voluptatum mollitia rem a quam dolore enim, deleniti alias accusamus in amet optio! Aliquam dignissimos sint voluptatibus eos natus magnam distinctio suscipit accusamus unde hic alias mollitia tempora nobis, est similique nesciunt? Iusto ullam dicta, quidem quia delectus eum unde doloribus enim quae? Unde facere placeat cum dignissimos saepe porro aliquam ad quia quaerat.
-</p>
+
+<section style="margin-bottom: 5%">
+        <center><h4 style="margin-top: 1%;color:#000; margin-bottom: 2%">BULS VISION</h4></center>
+        <p class="lead text-justify" style="margin-bottom:0%">
+            To be a world-class library that offers a dynamic and modern academic library services and programs responsive to the varied demands of Bicol University utilizing effective and efficient delivery system and communication technology. 
+        </p>
+</section>
+
+<section style="margin-bottom: 5%">
+        <center><h4 style="margin-top: 1%;color:#000; margin-bottom: 2%">BULS MISSION</h4></center>
+        <p class="lead text-justify" style="margin-bottom:0%">
+            To support the vision, mission and goals of Bicol University by providing quality resources, services and information access through application of multi-media system in information storage, delivery and retrival.
+        </p>
+</section>
+
+<section style="margin-bottom: 5%">
+        <center><h4 style="margin-top: 1%;color:#000; margin-bottom: 2%">PERFORMANCE PLEDGE</h4></center>
+        <p class="lead text-justify" style="margin-bottom:0%">
+            We, the employees of the Bicol University Library System pledge and commit to deliver quality public service as promised in the Citizen's Charter: Specifically, we will,
+        </p>
+        <p class="lead text-center">
+            Serve with integrety, dedication and commitment.
+            Be promt and timely.
+            Display procedures, fees and charges.
+            Be consistent in applying rules.
+            Provide feedback mechanism.
+            Be polite and courteous.
+            Demonstrate-sensitivity and appropriate behavior
+            and professionalism.
+            Wear proper uniform and identification.
+            Be available during office hours.
+            Respond to complaints.
+            Provide comfortable waiting area.
+            Treat everyone equally.
+        </p>
+</section>
 
 
 
@@ -53,3 +93,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo magnam provid
         $('.sidenav').sidenav();
     });
 </script>
+
+<?php
+    include 'templates/footer.php';
+?>

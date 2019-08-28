@@ -86,8 +86,13 @@ if(isset($_POST['createTag'])){
         }
     }
 
-    var_dump($createAccountError);
-
 }else{
 
+}
+
+if(isset($_GET['logout'])){
+    unset($_SESSION['studentId']);
+    unset($_SESSION['stagehash']);
+    session_destroy();
+    header('location: ../index.php');
 }
