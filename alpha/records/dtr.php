@@ -50,19 +50,19 @@ class PDF extends FPDF
     while($record = $result->fetch_object()){
         $course = "";
         if($record->course == 1){
-            $course = 'BSCS';
-        }
-        if($record->course == 2){
-            $course = 'BAT';
-        }
-        if($record->course == 3){
             $course = 'BEED';
         }
-        if($record->course == 4){
+        if($record->course == 2){
             $course = 'BSED';
         }
-        if($record->course == 5){
+        if($record->course == 3){
+            $course = 'BAT';
+        }
+        if($record->course == 4){
             $course = 'BSE';
+        }
+        if($record->course == 5){
+            $course = '----';
         }
         $pdf->Cell(50,5, $record->firstName.' '.$record->lastName ,0,0,'L');
         $pdf->Cell(15,5,$record->year ,0,0,'C');

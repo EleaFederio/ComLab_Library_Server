@@ -6,7 +6,7 @@ $db = new Database();
 
 $docs = new IdGenerator();
 
-$query = "SELECT * FROM `studyantes`";
+$query = "SELECT * FROM `students`";
 $result = $db->connect()->query($query);
 $counter = $result->num_rows;
 
