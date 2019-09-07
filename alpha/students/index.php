@@ -13,7 +13,7 @@ $result = $db->connect()->query("SELECT * FROM `students` JOIN `courses` ON `stu
 ?>
 
 <div class="container" style="margin-top: 2%">
-<a href="generateHash.php?generateRand=1" class="btn btn-primary">Create Student Hash Code</a><br>
+<a href="generateHash.php?generateRand=1" class="btn btn-primary btn-sm">Create Student Hash Code</a><br><br>
     <table class="table" id="table_id">
         <thead>
             <tr>
