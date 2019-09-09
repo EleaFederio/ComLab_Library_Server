@@ -1,10 +1,16 @@
 <?php
+include 'security/database.php';
 include 'security/authentication.php';
 include 'templates/header.php';
 if(!isset($_SESSION['hash'])){
     //header('Location:security/authentication.php');
 }
 ?>
+
+<div class="card-header text-center">
+    BICOL UNIVERSITY GUBAT CAMPUS
+</div>
+<h1 class="h1 text-center library-name">LIBRARY</h1>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -34,6 +40,42 @@ if(!isset($_SESSION['hash'])){
 </div>
 
 <div class="container">
+
+  <!-- Library Data -->
+  <div class="row" style="margin-top: 3%">
+    <div class="col-md-4 library-data">
+      <i class="fas fa-book-reader fa-4x fa-color" style="display: table; margin: auto"></i>
+      <h5 class="text-center">Students Inside the Library</h5>
+      <?php
+        $counter = 0;
+        $db = new Database();
+        $result = $db->connect()->query("SELECT * FROM `library_log` WHERE `date` = CURRENT_DATE() AND `time_out` = '00:00:00' ");
+        while($row = $result->fetch_object()){
+          $counter ++;
+        }
+      ?>
+      <h1 class="text-center"><?php echo $counter ?></h1>
+    </div>
+    <div class="col-md-4 library-data">
+      <i class="fas fa-users fa-4x" style="display: table; margin: auto"></i> 
+      <h5 class="text-center">Students who Enter Library</h5>
+      <?php
+        $counter = 0;
+        $db = new Database();
+        $result = $db->connect()->query("SELECT * FROM `library_log` WHERE `date` = CURRENT_DATE()");
+        while($row = $result->fetch_object()){
+          $counter ++;
+        }
+      ?>
+      <h1 class="text-center"><?php echo $counter ?></h1>
+    </div>
+    <div class="col-md-4 library-data">
+      <i class="fas fa-book fa-4x" style="display: table; margin: auto"></i> 
+      <h5 class="text-center">Borrow book request</h5>
+    </div>
+  </div>
+
+
   <section style="margin-bottom: 5%">
           <center><h4 style="margin-top: 1%;color:#000; margin-bottom: 2%">BULS VISION</h4></center>
           <p class="lead text-justify" style="margin-bottom:0%">

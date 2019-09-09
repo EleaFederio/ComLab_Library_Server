@@ -2,7 +2,7 @@
         <div class="card-header">
             BICOL UNIVERSITY GUBAT CAMPUS
         </div>
-        <div class="card-body footer-cover">
+        <div class="card-body footer-cover" style="background-color:#888">
             <h5 class="card-title">COLLEGE LIBRARY</h5>
             <p class="card-text">Ms. Lina Celosa <i>(Librarian 1)</i></p>
             <a href="#" class="btn btn-primary btn-sm">Contact Us</a>

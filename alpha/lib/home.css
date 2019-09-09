@@ -1,3 +1,19 @@
 .footer-cover{
     background-color: #888;
 }
+.school-name{
+    color: orange;
+    background: #ccc;
+}
+.library-name{
+    margin-bottom: auto;
+    color: darkblue;
+}
+.fa-color{
+    color: black;
+}
+.library-data{
+    background-color: #aaa;
+    padding: 5%;
+    border: 3px solid white;
+}
