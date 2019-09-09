@@ -1,11 +1,11 @@
-        <div class="card text-center footer-cover">
+        <div class="card text-center footer-cover" style="margin-top: 5%">
         <div class="card-header">
             BICOL UNIVERSITY GUBAT CAMPUS
         </div>
         <div class="card-body footer-cover">
             <h5 class="card-title">COLLEGE LIBRARY</h5>
             <p class="card-text">Ms. Lina Celosa <i>(Librarian 1)</i></p>
-            <a href="#" class="btn btn-primary">Contact Us</a>
+            <a href="#" class="btn btn-primary btn-sm">Contact Us</a>
         </div>
         </div>
 

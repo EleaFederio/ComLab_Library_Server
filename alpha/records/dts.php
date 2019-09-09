@@ -1,0 +1,1 @@
+<?php echo "SELECT * FROM library_log JOIN students ON library_log.student = students.id WHERE `date` BETWEEN '{$_POST['begin']}' AND '{$_POST['end']}'" ?>

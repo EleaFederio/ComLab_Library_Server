@@ -45,7 +45,7 @@ class PDF extends FPDF
     $pdf->Cell(30,5,'Date',0,0,'C');
     $pdf->Ln();
     $pdf->SetFont('Arial','',12);
-    $result = $db->connect()->query('SELECT * FROM library_log JOIN students ON library_log.student = students.id');
+    $result = $db->connect()->query("SELECT * FROM library_log JOIN students ON library_log.student = students.id WHERE `date` BETWEEN '{$_POST['begin']}' AND '{$_POST['end']}'");
     //var_dump($result);
     while($record = $result->fetch_object()){
         $course = "";

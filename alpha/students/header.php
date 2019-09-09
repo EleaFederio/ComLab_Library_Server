@@ -43,7 +43,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="../records/create_id.php">Generate Student Id</a>
-              <a class="dropdown-item" href="../records/dtr.php">DTR</a>
+              <a class="dropdown-item" href="../records/librecord.php">DTR</a>
               <a class="dropdown-item" href="#">Evaluation</a>
             </div>
           </li>

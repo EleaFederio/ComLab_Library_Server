@@ -33,8 +33,8 @@
               Records
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="../alpha/records/create_id.php">Generate Student Id</a>
-              <a class="dropdown-item" href="../alpha/records/dtr.php" target="_blank">DTR</a>
+              <a class="dropdown-item" href="../alpha/records/create_id.php" target="_blank">Generate Student Id</a>
+              <a class="dropdown-item" href="../alpha/records/librecord.php" >DTR</a>
               <a class="dropdown-item" href="#">Evaluation</a>
             </div>
           </li>
