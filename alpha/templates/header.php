@@ -40,7 +40,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="security/authentication.php?logout=1" tabindex="-1" aria-disabled="true">Logout</a>
           </li>
         </ul>
       </div>

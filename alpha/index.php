@@ -1,10 +1,25 @@
 <?php
-include 'security/database.php';
 include 'security/authentication.php';
 include 'templates/header.php';
 if(!isset($_SESSION['hash'])){
-    //header('Location:security/authentication.php');
+    header('Location:security/login.php');
 }
+?>
+
+<?php
+
+if(isset($_GET['loginError'])){
+  if($_GET['loginError'] == 1){
+      echo "<script>
+              Swal.fire({
+              type: 'error',
+              title: 'Login Error!!',
+              text: 'Wrong Username or Password!',
+              });
+          </script>";
+  }
+}
+
 ?>
 
 <div class="card-header text-center">
@@ -44,11 +59,10 @@ if(!isset($_SESSION['hash'])){
   <!-- Library Data -->
   <div class="row" style="margin-top: 3%">
     <div class="col-md-4 library-data">
-      <i class="fas fa-book-reader fa-4x fa-color" style="display: table; margin: auto"></i>
+      <i class="fas fa-book-reader fa-4x fa-color" style="display: table; margin: auto"></i><br>
       <h5 class="text-center">Students Inside the Library</h5>
       <?php
         $counter = 0;
-        $db = new Database();
         $result = $db->connect()->query("SELECT * FROM `library_log` WHERE `date` = CURRENT_DATE() AND `time_out` = '00:00:00' ");
         while($row = $result->fetch_object()){
           $counter ++;
@@ -57,7 +71,7 @@ if(!isset($_SESSION['hash'])){
       <h1 class="text-center"><?php echo $counter ?></h1>
     </div>
     <div class="col-md-4 library-data">
-      <i class="fas fa-users fa-4x" style="display: table; margin: auto"></i> 
+      <i class="fas fa-users fa-4x" style="display: table; margin: auto"></i><br>
       <h5 class="text-center">Students who Enter Library</h5>
       <?php
         $counter = 0;
@@ -70,7 +84,7 @@ if(!isset($_SESSION['hash'])){
       <h1 class="text-center"><?php echo $counter ?></h1>
     </div>
     <div class="col-md-4 library-data">
-      <i class="fas fa-book fa-4x" style="display: table; margin: auto"></i> 
+      <i class="fas fa-book fa-4x" style="display: table; margin: auto"></i><br>
       <h5 class="text-center">Borrow book request</h5>
     </div>
   </div>
