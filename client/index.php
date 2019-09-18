@@ -1,27 +1,32 @@
 <?php
 include 'security/authentication.php';
 
-// unset($_SESSION['hash']);
-
 if(!isset($_SESSION['hash'])){
     header('Location:security/login.php');
 }else{
     
 }
 include 'templates/header.php';
-// echo $_SESSION['hash'];
-$studentId = $_SESSION['studentId'];
 
-    $query = "SELECT * FROM `students` WHERE `studentId` = '$studentId'";
-    if($result = $db->connect()->query($query)){
-        if($student = $result->fetch_object()){
-            $_SESSION['fullname'] = $student->firstName.' '.$student->lastName;
+// echo $_SESSION['hash'];
+    // $studentId = $_SESSION['studentId'];
+
+    if(isset($_SESSION['studentId'])){
+        $studentId = $_SESSION['studentId'];
+        $query = "SELECT * FROM `students` WHERE `studentId` = '$studentId'";
+        if($result = $db->connect()->query($query)){
+            if($student = $result->fetch_object()){
+                $_SESSION['fullname'] = $student->firstName.' '.$student->lastName;
+            }
         }
     }
 
 ?>
 <!-- ************************************************************************* -->
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 <link rel="stylesheet" href="design/home.css">
+
 <style>
     p{
         padding-top: 0%;
@@ -81,6 +86,7 @@ $studentId = $_SESSION['studentId'];
 
 
 <!-- ************************************************************************** -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');

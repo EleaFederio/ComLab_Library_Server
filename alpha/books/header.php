@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <script src="https://kit.fontawesome.com/7a7ce10af7.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -25,9 +26,13 @@
           <li class="nav-item active">
             <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="index.php">Books</a>
-          </li>
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Books
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="index.php">Generate Student Id</a>
+            <a class="dropdown-item" href="borrow_request.php">Borrow Request</a>
+          </div>
           <li class="nav-item active">
               <a class="nav-link" href="../students/">Students</a>
             </li>

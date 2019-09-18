@@ -1,5 +1,6 @@
 <?php
 include 'authentication.php';
+
 ?>
 
 <!doctype html>
@@ -14,10 +15,27 @@ include 'authentication.php';
 
     <!-- Own Design -->
     <link rel="stylesheet" href="../lib/css/auth.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     
     <title>Hello, world!</title>
   </head>
   <body>
+  
+
+  <?php
+
+  if(isset($_GET['registered'])){
+    if($_GET['registered'] == 1){
+        echo '<script>
+        swal("Registration Success!", "You are now part of the BUGC Library System");
+        </script>';
+    }
+  }
+
+  ?>
       
     <section class="container-fluid">
         <section class="row justify-content-center">

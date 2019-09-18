@@ -1,7 +1,8 @@
 <?php
+
 $bookId = $_GET['id'];
 include '../templates/header.php';
-    include '../security/database.php';
+    include '../security/authentication.php';
     $booktTitle = '';
     $bookAuthur = '';
     $bookPublisher = '';
@@ -81,11 +82,12 @@ include '../templates/header.php';
                 <h4 class="details-info"><?php echo $bookRemarks ?></h4>
                 </div>
             </div>
-            <center><a href="" class="btn btn-primary" style="margin-top: 10%">Borrow this book</a></center>
-        </div>
 
+            <center><a href="book_manager.php?bookid=<?php echo $bookId ?>&studentId=<?php echo $_SESSION['studentId'] ?>" class="btn btn-primary" style="margin-top: 10%">Borrow this book</a></center>
+        </div>
+        <br><br><br><br>
         
 
-        <br><br><br><br>
+        
     
 <?php

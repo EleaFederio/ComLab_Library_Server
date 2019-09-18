@@ -4,6 +4,14 @@ include '../security/authentication.php';
 if(!isset($_SESSION['hash'])){
     header('Location:../security/login.php');
 }
+
+if(isset($_GET['borrow_request'])){
+    if($_GET['borrow_request'] == 1){
+        echo '<script>
+        swal("Book Borrow Request Sent", "Wait for librarians Response.");
+        </script>';
+    }
+}
     // if(isset($_POST['search'])){
     //     $response = "<ul><li>No data found!</li></ul>";
 

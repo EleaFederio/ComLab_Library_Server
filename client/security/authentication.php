@@ -80,14 +80,13 @@ if(isset($_POST['createTag'])){
     if(empty($createAccountError)){
         $password = md5($password);
         $query = "UPDATE `students` SET `firstName`= '$firstname',`lastName`= '$lastname', `phoneNumber`= '$phone' ,`appPassword`= '$password' WHERE `studentId` = '$studentId' ";
-        echo $query;
         if($db->connect()->query($query)){
-            echo "<script>alert('Data saved')</script>";
+            header('location: login.php?registered=1');
         }
     }
 
 }else{
-
+    
 }
 
 if(isset($_GET['logout'])){
