@@ -7,7 +7,13 @@ $oneStudentSelect = $db->connect()->query("SELECT * FROM `students` WHERE `id` =
 if($selectedStudent = $oneStudentSelect->fetch_object()){
     $studentFirstName = $selectedStudent->firstName;
     $studentLastName = $selectedStudent->lastName;
+    $middleName = $selectedStudent->middleName;
+    $phone = $selectedStudent->phoneNumber;
+    $email = $selectedStudent->email;
     $studentId = $selectedStudent->studentId;
+    $brgy = $selectedStudent->brgy_street;
+    $town = $selectedStudent->town;
+    $province = $selectedStudent->province;
 }
 ?>
 <!doctype html>
@@ -27,7 +33,7 @@ if($selectedStudent = $oneStudentSelect->fetch_object()){
   </head>
   <body>
       
-    <section class="container-fluid">
+    <!-- <section class="container-fluid">
         <section class="row justify-content-center">
             <section class="col-12 col-sm-6 col-md-3">
                 <form class="form-container" action="create_account.php" method="POST">
@@ -57,7 +63,100 @@ if($selectedStudent = $oneStudentSelect->fetch_object()){
                 </form>
             </section>
         </section>
-    </section>
+    </section> -->
+
+    <div class="container">
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="<?php echo $studentFirstName ?>" value="<?php echo $studentFirstName ?>" required>
+                    <div class="invalid-feedback">
+                        First name require!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="<?php echo $studentLastName ?>" value="<?php echo $studentLastName ?>" required>
+                    <div class="invalid-feedback">
+                        Last name require!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustomUsername">Middle Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="<?php echo $middleName ?>" value="<?php echo $middleName ?>" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback"> 
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationDefault01">Phone Number</label>
+                    <input type="number" class="form-control" id="validationDefault01" minlength="11" maxlength="11" placeholder="09---------" value="<?php echo $phone ?>" required>
+                    <div class="invalid-feedback">
+                        Phone number require!
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationDefault02">Student ID</label>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="2019-GC-000000" value="<?php echo $studentId ?>"  minlength="14" maxlength="14" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefaultUsername">Email</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                        </div>
+                        <input type="email" class="form-control" id="validationDefaultUsername" placeholder="myemail@mail.com" value="<?php echo $email ?>" aria-describedby="inputGroupPrepend2" required>
+                        <div class="invalid-feedback">
+                            Email require!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">Barangay/Street</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="Pinontingan" value="<?php echo $brgy ?>" required>
+                    <div class="invalid-feedback">
+                        Please provide barangay/street
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">Town</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="Gubat" value="<?php echo $town ?>" required>
+                    <div class="invalid-feedback">
+                        Please provide a Town
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Province</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Sorsogon" value="<?php echo $province ?>" required>
+                    <div class="invalid-feedback">
+                        Please provide a Province
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

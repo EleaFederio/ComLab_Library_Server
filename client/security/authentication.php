@@ -47,6 +47,7 @@ if(isset($_POST['createTag'])){
     $studentId = $_POST['studentId'];
     $firstname = $_POST['studentFirstName'];
     $lastname = $_POST['studentLastName'];
+    $middlename = $_POST['middleName'];
     $password = $_POST['studentPassword'];
     $confirmPassword = $_POST['studentConfirmPassword'];
     $phone = $_POST['studentPhoneNumber'];
