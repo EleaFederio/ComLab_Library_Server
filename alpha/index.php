@@ -61,14 +61,7 @@ if(isset($_GET['loginError'])){
     <div class="col-md-4 library-data">
       <i class="fas fa-book-reader fa-4x fa-color" style="display: table; margin: auto"></i><br>
       <h5 class="text-center">Students Inside the Library</h5>
-      <?php
-        $counter = 0;
-        $result = $db->connect()->query("SELECT * FROM `library_log` WHERE `date` = CURRENT_DATE() AND `time_out` = '00:00:00' ");
-        while($row = $result->fetch_object()){
-          $counter ++;
-        }
-      ?>
-      <h1 class="text-center"><?php echo $counter ?></h1>
+      <h1 class="text-center" id="demo">0</h1>
     </div>
     <div class="col-md-4 library-data">
       <i class="fas fa-users fa-4x" style="display: table; margin: auto"></i><br>
@@ -126,6 +119,23 @@ if(isset($_GET['loginError'])){
           </p>
   </section>
 </div>
+
+<script>
+
+function loadDoc() {
+  setInterval(function(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("demo").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "library_active_students.php", true);
+    xhttp.send();
+  }, 1000);
+}
+
+</script>
 
 <?php
 include 'templates/footer.php';

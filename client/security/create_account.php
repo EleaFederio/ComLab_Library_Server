@@ -70,14 +70,14 @@ if($selectedStudent = $oneStudentSelect->fetch_object()){
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom01">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="<?php echo $studentFirstName ?>" value="<?php echo $studentFirstName ?>" required>
+                    <input type="text" class="form-control" id="validationCustom01" name="studentFirstName" placeholder="<?php echo $studentFirstName ?>" value="<?php echo $studentFirstName ?>" required>
                     <div class="invalid-feedback">
                         First name require!
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom02">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" placeholder="<?php echo $studentLastName ?>" value="<?php echo $studentLastName ?>" required>
+                    <input type="text" class="form-control" id="validationCustom02" name="studentLastName" placeholder="<?php echo $studentLastName ?>" value="<?php echo $studentLastName ?>" required>
                     <div class="invalid-feedback">
                         Last name require!
                     </div>
@@ -85,7 +85,7 @@ if($selectedStudent = $oneStudentSelect->fetch_object()){
                 <div class="col-md-4 mb-3">
                     <label for="validationCustomUsername">Middle Name</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="<?php echo $middleName ?>" value="<?php echo $middleName ?>" aria-describedby="inputGroupPrepend" required>
+                        <input type="text" class="form-control" id="validationCustomUsername" name="studentMiddleName" placeholder="<?php echo $middleName ?>" value="<?php echo $middleName ?>" aria-describedby="inputGroupPrepend" required>
                         <div class="invalid-feedback"> 
                             Please choose a username.
                         </div>
@@ -97,7 +97,7 @@ if($selectedStudent = $oneStudentSelect->fetch_object()){
             <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="validationDefault01">Phone Number</label>
-                    <input type="number" class="form-control" id="validationDefault01" minlength="11" maxlength="11" placeholder="09---------" value="<?php echo $phone ?>" required>
+                    <input type="number" class="form-control" id="validationDefault01" minlength="11"  maxlength="11" placeholder="09---------" value="<?php echo $phone ?>" required>
                     <div class="invalid-feedback">
                         Phone number require!
                     </div>
@@ -157,6 +157,7 @@ if($selectedStudent = $oneStudentSelect->fetch_object()){
             <button class="btn btn-primary" type="submit">Submit form</button>
         </form>
     </div>
+    <br><br><br><br>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
