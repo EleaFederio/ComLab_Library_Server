@@ -14,7 +14,20 @@ $result = $db->connect()->query($query);
 
 
 <div class="container" style="margin-top:5%">
-    <h3 style="text-align:center">Borrow Request</h3><br>
+
+    <ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" href="#">borrow Request</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Approved Books</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Returned Books</a>
+    </li>
+    </ul>
+
+    <br>
     <table class="table">
     <thead class="thead-dark">
         <tr>

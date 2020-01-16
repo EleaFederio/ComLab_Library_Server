@@ -21,11 +21,13 @@ include 'authentication.php';
                 <form class="form-container" action="login.php" method="POST">
                     <h3 class="text-center">LOGIN FORM</h3>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="username" placeholder="Student ID">
-                    <p style="color: red"><?php echo $usernameError ?></p>
+                    <input type="text" class="form-control" name="username" placeholder="Student ID" required>
+                    <div class="invalid-feedback">
+                        First name require!
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="password" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
                     <p style="color: red"><?php echo $passwordError ?></p>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block" name="login">Submit</button>
@@ -38,7 +40,7 @@ include 'authentication.php';
             if($_GET['loginError'] == 1){
                 echo "<script>
                         Swal.fire({
-                        type: 'error',
+                        imageUrl: 'https://img.icons8.com/officel/80/000000/decision.png',
                         title: 'Login Error!!',
                         text: 'Wrong Username or Password!',
                         });
