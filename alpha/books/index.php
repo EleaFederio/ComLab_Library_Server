@@ -59,11 +59,13 @@ include 'header.php';
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="width:100%;">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document" >
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Add New Book</h5>
-        <br><br><br>
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add New Book</h5>
+        </div>
         
         <!-- dsdsdsds -->
+        
+      <div class="modal-body">
         <form action="addbook.php" method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-5">
@@ -71,8 +73,8 @@ include 'header.php';
                     <img src="bookpics/no_image_book.jpg" id="bookpic" alt="" width="350">
                     <input type="file" onchange="imagePreview.call(this)" name="book_image" value="upload picture">
                 </div>
-                </div>
-                <div class="col-md-7">
+            </div>
+            <div class="col-md-7">
                 <div class="form-group col-md-6">
                 <label>Title</label>
                     <input type="text" class="form-control" name="title" placeholder="Book Title...">
@@ -116,13 +118,10 @@ include 'header.php';
                 </div>
             </div>
         </div>
-    </form>
+        </form>
+      </div>
 
 
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
