@@ -13,11 +13,9 @@ $book = new Books($db);
 $result = $book->read();
 
 $num = $result->rowCount();
-echo $num;
 
 if($num > 0){
     $book_arr = array();
-    $book_arr['data'] = array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)){
         extract($row);
@@ -29,10 +27,11 @@ if($num > 0){
             'edition' => $edition,
             'pages' => $pages,
             'call_number' => $call_number,
-            'year' => $year
+            'year' => $year,
+            'book_pic' => $book_pic
         );
 
-        array_push($book_arr['data'], $book_item);
+        array_push($book_arr, $book_item);
     }
     echo json_encode($book_arr);
 }else{
