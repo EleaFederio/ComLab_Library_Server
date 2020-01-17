@@ -5,9 +5,18 @@ include 'header.php';
     <!-- <a class="btn btn-primary" href="addbook.php" style="margin-top: 1%">ADD BOOK</a> -->
     <!-- Button trigger modal -->
     <br><br>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Add Books
-</button>
+<div class="row">
+    <div class="col-md-6">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Add Books
+        </button>
+    </div>
+    <div class="col-md-6">
+        <form action="excel.php" action="" method="POST">
+            <input type="submit" value="Export Report" name="export_excel" class="btn btn-success">
+        </form>
+    </div>
+</div>
 </div>
 
 <?php
